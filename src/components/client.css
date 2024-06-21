@@ -1,0 +1,49 @@
+.client {
+  padding: 22px 10%;
+  background-color: var(--snd-bg-color);
+}
+.client-container {
+  justify-content: space-between;
+}
+.client-img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.client-img img {
+  width: 50%;
+  filter: grayscale(100);
+  display: inline-block;
+  padding: 10px 0;
+  animation: fadeOut 4s ease-in-out 1 alternate;
+}
+
+.client-img img:hover {
+  filter: none;
+}
+
+/* Animation */
+
+@keyframes fadeOut {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Media Query for smaller screen */
+@media (max-width: 840px) {
+  .client-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .client-img {
+    display: flex;
+    width: 50%;
+  }
+  .client-img img{
+    width: 30%;
+  }
+}

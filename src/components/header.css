@@ -1,0 +1,149 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 22px 10%;
+  z-index: 10;
+  background-color: var(--bg-color);
+}
+.header-container {
+  justify-content: space-between;
+ 
+}
+.logo a {
+  text-transform: uppercase;
+  font-weight: 700;
+  display: block;
+  font-size: 30px;
+  color: var(--text-color);
+}
+
+.logo img {
+  padding-bottom: 5px;
+  margin: 0;
+  max-height: 70px;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+.nav-bar ul li {
+  display: inline-block;
+  list-style: none;
+}
+
+.nav-bar a {
+  padding: 10px 0 10px 30px;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: normal;
+  color: var(--a-text-color);
+  white-space: nowrap;
+  transition: 0.3s;
+}
+
+.nav-bar a:hover,
+.nav-bar a.active {
+  color: var(--text-color);
+}
+
+.nav-bar .btn {
+  background: var(--text-color);
+  color: var(--bg-color);
+  padding: 10px 25px;
+  margin-left: 30px;
+  border-radius: 50px;
+}
+.nav-bar .btn:hover {
+  background: var(--btn-hover);
+  color: var(--bg-color);
+}
+.header-container .icon {
+  display: none;
+}
+.close-icon {
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Media Query for Mobile Menu */
+@media (max-width: 840px) {
+  .logo a {
+    font-size: 20px;
+  }
+  .logo img {
+    max-height: 47px;
+  }
+  .nav-bar {
+    padding: 15px 0;
+  }
+  .nav-bar ul {
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 55px;
+    right: 15px;
+    bottom: 15px;
+    left: 15px;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: var(--bg-color);
+    overflow-y: auto;
+    transition: 0.3s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1;
+  }
+
+  .nav-bar ul li {
+    display: block;
+    margin: 25px 40px;
+  }
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .header-container .icon {
+    display: block;
+    cursor: pointer;
+  }
+
+  .hide-mobile-menu {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .nav-bar ul.show-mobile-menu {
+    right: 15px;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .close-icon {
+    
+    opacity: 1;
+    visibility: visible;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    z-index: 2;
+  }
+}
+@media (max-width: 500px) {
+  .nav-bar ul li {
+   
+    margin: 25px 30px;
+  }
+  .nav-bar .btn {
+    padding: 10px 15px;
+    
+  }
+}
